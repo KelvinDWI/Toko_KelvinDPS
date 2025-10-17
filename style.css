@@ -1,0 +1,220 @@
+body {
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.05) 1px, transparent 0);
+  background-size: 20px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+  .dashboard-header {
+    margin-bottom: 2rem;
+  }
+  .stat-card {
+    border-radius: 15px;
+    transition: transform 0.2s ease;
+  }
+  .stat-card:hover {
+    transform: translateY(-3px);
+  }
+  .icon-square {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bg-gradient-primary {
+    background: linear-gradient(45deg, #4e73df, #224abe);
+  }
+  .bg-gradient-success {
+    background: linear-gradient(45deg, #1cc88a, #198754);
+  }
+  .bg-gradient-warning {
+    background: linear-gradient(45deg, #f6c23e, #e0a800);
+  }
+  .hover-row:hover {
+    background-color: #f1f3f5 !important;
+  }
+  .dashboard-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .left-panel {
+    flex: 1 1 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .right-panel {
+    flex: 1 1 65%;
+  }
+/* 🌐 Efek hover untuk link navbar */
+.navbar .nav-link {
+  color: black;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Saat diarahkan (hover) */
+.navbar .nav-link:hover {
+  color: #0B5ED7; /* warna teks berubah jadi kuning */
+}
+
+/* Garis bawah animasi */
+.navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #0B5ED7;
+  left: 50%;
+  bottom: 0;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+/* Saat di-hover garis bawah muncul */
+.navbar .nav-link:hover::after {
+  width: 50%;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Header dan tombol tambah */
+h2.text-dark {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.btn-primary.btn-sm {
+  border-radius: 8px;
+  font-weight: 500;
+  padding: 0.45rem 0.9rem;
+  box-shadow: 0 3px 6px rgba(13, 110, 253, 0.25);
+}
+.btn-primary.btn-sm:hover {
+  transform: translateY(-1px);
+}
+
+/* Tabel utama */
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Kolom dan teks */
+.table td, .table th {
+  vertical-align: middle;
+  font-size: 0.93rem;
+}
+.table td.text-uppercase {
+  letter-spacing: 0.5px;
+}
+
+/* Card smooth effect */
+.card {
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+h5, h6 {
+  font-weight: 600;
+}
+small {
+  font-size: 0.9rem;
+}
+
+/* Tombol aksi */
+.btn-warning, .btn-danger {
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+.btn-warning:hover {
+  background-color: #f59f00;
+  border-color: #f59f00;
+}
+.btn-danger:hover {
+  background-color: #e03131;
+  border-color: #e03131;
+}
+
+/* Card tabel */
+.card.border-0.shadow-sm {
+  border-radius: 12px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+}
+.card.border-0.shadow-sm:hover {
+  transform: translateY(-3px);
+}
+
+/* Alert styling */
+.alert {
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+/* Modal */
+.modal-content {
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.modal-header {
+  border-bottom: 1px solid #e5e7eb;
+  font-weight: 600;
+}
+.modal-body label {
+  font-weight: 500;
+  color: #374151;
+}
+.modal-footer {
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Input dalam modal */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  transition: all 0.2s ease;
+}
+.form-control:focus {
+  border-color: #0b5ed7;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+
+/* Responsif */
+@media (max-width: 768px) {
+  h2.text-dark {
+    font-size: 1.25rem;
+  }
+  .btn-primary.btn-sm {
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+    .dashboard-wrapper {
+      flex-direction: column;
+    }
+    .left-panel, .right-panel {
+      flex: 1 1 100%;
+    }
+}
+
+
+/* Gaya cetak Laporan */
+@media print {
+  nav, .btn, form, .modal, .no-print { display: none !important; }
+  .table { border: 1px solid #000; }
+  .table th, .table td { border: 1px solid #000 !important; }
+  body { background: #fff; }
+}
